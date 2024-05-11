@@ -1,5 +1,5 @@
 :root{
-    --blue: #03459B;
+    --blue: #369DBA;
     --white: #ffffff;
     --black: #231E1E;
     --gray:#EEEEEE;
@@ -15,3 +15,4 @@
 }
 
 img{ max-width: 100%;}
+.button{ display: inline; color: var(--white); padding: 10px 30px; background-color: var(--blue); text-decoration: none;}
