@@ -1,7 +1,7 @@
 :root{
     --blue: #369DBA;
     --white: #ffffff;
-    --black: #231E1E;
+    --black: #222222;
     --gray:#EEEEEE;
     --font60:60px;
     --font45:45px;
@@ -13,6 +13,42 @@
     --pad50:50px;
     --pad30:30px;
 }
-
+body { font-family: "Montserrat", sans-serif;}
 img{ max-width: 100%;}
-.button{ display: inline; color: var(--white); padding: 10px 30px; background-color: var(--blue); text-decoration: none;}
+.button{ display: inline; color: var(--white); padding: 10px 30px; background-color: var(--blue); border: 2px solid var(--blue); text-decoration: none; line-height: 1; transition: all 0.5s linear; display: inline-block;}
+.button:hover{  background-color: var(--white); color: var(--black); border-radius: 30px;}
+.pad100{ padding: var(--pad100) 0;}
+.marT30{ margin-top: var(--pad30);}
+
+h1{ font-size: var(--font60); color: var(--white); line-height: 1.2; margin: 0; margin-bottom: 20px; font-weight: 400;}
+h2{ font-size: var(--font30); color: var(--black); line-height: 1.2; margin: 0; margin-bottom: 20px; font-weight: 700;}
+h3{ font-size: var(--font45); color: var(--blue); line-height: 1.2; margin: 0; margin-bottom: 20px; font-weight: 700;}
+p{ margin: 0; font-size: 18px; color: var(--black); }
+
+/* homeBannerSection */
+.homeBannerSection{ background: url(../images/banner1.jpg)no-repeat; background-size: cover; height: 100vh; padding: var(--pad100) 0; display: flex; align-items: center; }
+.homeBannerImg{ text-align: center;}
+.homeBannerText{ max-width: 644px;}
+.homeBannerText p {font-size: var(--font30); color: var(--white); font-weight: 700;}
+/* homeBannerSection */
+
+/* aboutusSection */
+.aboutusSection{background: url(../images/aboutbg.png) no-repeat; background-size: cover; }
+.qualitySection{ display: flex; flex-wrap: wrap; max-width: 1600px; margin: 0 auto;}
+.qualitySection .qualityBox {flex: 1; background-color: var(--gray); padding: 40px 30px; text-align: center;}
+.qualitySection .qualityBox.blue{ background-color: var(--blue);}
+.qualitySection .qualityBox.blue :where(h2, p){ color: var(--white);}
+.qualitySection .qualityBox img{ padding-bottom: 20px;}
+.qualitySection .qualityBox h2{ color: var(--blue);}
+/* aboutusSection */ 
+
+/* Our Services */
+.servicesSection .servicesBox{ display: flex; flex-wrap: wrap; height: 100%;}
+.servicesSection .row{ row-gap:  30px;}
+.titleText{ padding-bottom:var(--pad30);}
+.servicesSection .servicesBox .servicesImg,.servicesSection .servicesBox .servicesText{ flex: 1;}
+.servicesSection .servicesBox .servicesImg img{ height: 100%; object-fit: cover;}
+.servicesSection .servicesBox .servicesText{ padding: 25px; background-color: var(--gray); display: flex; flex-direction: column; justify-content: space-between;}
+.servicesSection .servicesBox .servicesText a{ padding-top: 20px; display: inline-block;}
+.servicesSection .servicesBox .servicesText h2{ color: var(--blue);}
+/* Our Services */
