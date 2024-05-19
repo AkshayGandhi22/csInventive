@@ -49,6 +49,62 @@ p{ margin: 0; font-size: 18px; color: var(--black); }
 .servicesSection .servicesBox .servicesImg,.servicesSection .servicesBox .servicesText{ flex: 1;}
 .servicesSection .servicesBox .servicesImg img{ height: 100%; object-fit: cover;}
 .servicesSection .servicesBox .servicesText{ padding: 25px; background-color: var(--gray); display: flex; flex-direction: column; justify-content: space-between;}
-.servicesSection .servicesBox .servicesText a{ padding-top: 20px; display: inline-block;}
+.servicesSection .servicesBox .servicesText a{ padding-top: 20px; display: inline-block; transition: all 0.5s linear;}
 .servicesSection .servicesBox .servicesText h2{ color: var(--blue);}
+.servicesSection .servicesBox .servicesText:hover a{ animation: buttonHover 2s linear infinite ; }
+@keyframes buttonHover{ 0%{ transform: translateY(0); }50%{ transform: translatex(10px); }100%{ transform: translateY(0); }}
 /* Our Services */
+
+/* footerSection */
+.footerSection{ background-color: var(--blue);}
+.footerSection :where(h4, a){ color: var(--white);}
+.footerSection h4{ font-size: var(--font20); font-weight: 600; margin: 0; margin-bottom: 15px;}
+.footerSection a{text-decoration: none; display: block; line-height: 1.5}
+.footerSection a:hover{ color: var(--white); opacity: 0.6;}
+.footerSection .footerNav {padding: 0; margin: 0; column-count: 2; list-style: none;}
+.footerSection .socialMedia a{ display: inline-block; }
+.footerSection .socialMedia a + a {margin-left: 10px;}
+/* footerSection */
+
+@media(max-width: 991px){
+    :root{
+      --font60:40px;
+      --font45:30px;
+      --font30:25px;
+      --font20:18px;
+      --font18:16px;
+      --pad100:50px;
+      --pad60:30px;
+      --pad50:25px;
+      --pad30:20px;
+  }
+  .footerSection .row{gap: 30px 0;}
+}
+
+
+@media(max-width: 767px) and (orientation: landscape){
+     .homeBannerImg img{ display: none;}
+     .qualitySection .qualityBox{ flex: 0 0 50%;}
+     .qualitySection .qualityBox:first-child{ order: 2;}
+     .qualitySection .qualityBox:nth-child(2){ order: 1;}
+     .qualitySection .qualityBox:nth-child(3){ order: 3;}
+     .qualitySection .qualityBox:nth-child(4){ order: 4;}
+}
+
+@media(max-width: 767px) and (orientation: portrait){
+    .qualitySection .qualityBox{ flex: 0 0 100%;}
+    .qualitySection .qualityBox:first-child{ order: 1;}
+    .qualitySection .qualityBox:nth-child(2){ order: 2;}
+    .qualitySection .qualityBox:nth-child(3){ order: 3;}
+    .qualitySection .qualityBox:nth-child(4){ order: 4;}
+}
+@media (max-width: 767px){
+    :root{
+        --font60:30px;
+        --font45:25px;
+    }
+    .homeBannerImg img{height:200px; margin-top: 20px;}
+    .aboutUsText{ margin-top: var(--pad30);}
+    .servicesSection .servicesBox{ flex-direction: column;}
+    
+}
