@@ -18,6 +18,7 @@ img{ max-width: 100%;}
 .button{ display: inline; color: var(--white); padding: 10px 30px; background-color: var(--blue); border: 2px solid var(--blue); text-decoration: none; line-height: 1; transition: all 0.5s linear; display: inline-block;}
 .button:hover{  background-color: var(--white); color: var(--black); border-radius: 30px;}
 .pad100{ padding: var(--pad100) 0;}
+.padb0{ padding-bottom: 0;}
 .marT30{ margin-top: var(--pad30);}
 
 h1{ font-size: var(--font60); color: var(--white); line-height: 1.2; margin: 0; margin-bottom: 20px; font-weight: 400;}
@@ -27,9 +28,12 @@ p{ margin: 0; font-size: 18px; color: var(--black); }
 
 /* homeBannerSection */
 .homeBannerSection{ background: url(../images/banner1.jpg)no-repeat; background-size: cover; height: 100vh; padding: var(--pad100) 0; display: flex; align-items: center; }
+.aboutusbanner{ background: url(../images/aboutus.jpg)no-repeat; background-size: cover; background-position: bottom;}
+.servicesBanner{ background: url(../images/servicesBanner.jpg)no-repeat; background-size: cover; background-position: bottom;}
 .homeBannerImg{ text-align: center;}
 .homeBannerText{ max-width: 644px;}
 .homeBannerText p {font-size: var(--font30); color: var(--white); font-weight: 700;}
+.innerbanner{ height: 70vh; text-align: center;}
 /* homeBannerSection */
 
 /* aboutusSection */
@@ -56,7 +60,7 @@ p{ margin: 0; font-size: 18px; color: var(--black); }
 /* Our Services */
 
 /* footerSection */
-.footerSection{ background-color: var(--blue);}
+.footerSection{ background-color: var(--blue); padding-bottom: var(--pad50);}
 .footerSection :where(h4, a){ color: var(--white);}
 .footerSection h4{ font-size: var(--font20); font-weight: 600; margin: 0; margin-bottom: 15px;}
 .footerSection a{text-decoration: none; display: block; line-height: 1.5}
@@ -64,7 +68,24 @@ p{ margin: 0; font-size: 18px; color: var(--black); }
 .footerSection .footerNav {padding: 0; margin: 0; column-count: 2; list-style: none;}
 .footerSection .socialMedia a{ display: inline-block; }
 .footerSection .socialMedia a + a {margin-left: 10px;}
+.copyWrite{ padding: var(--pad30) 0; background-color: var(--blue); margin-top: 1px;}
+.copyWrite p{ color: var(--white); font-size: 16px;}
 /* footerSection */
+
+/* aboutusPage */
+.visionSection .row{ align-items: center;}
+.visionSection .visionImg img{width: 100%; object-fit: cover;}
+.pdr0{ padding-right: 0;}
+.pdl0{ padding-left: 0;}
+.visionBox{ border: 1px solid #222222;}
+.visionText{ max-width: 485px; margin: var(--pad30) auto; }
+/* aboutusPage */
+
+/* servicesPage*/
+.servicesPageBox {border: 1px solid #707070;}
+.servicesPageBox .row{align-items: center;}
+.servicesPageBox .row + .row{ border-top:1px solid #707070 ;}
+/* servicesPage*/
 
 @media(max-width: 991px){
     :root{
@@ -79,6 +100,8 @@ p{ margin: 0; font-size: 18px; color: var(--black); }
       --pad30:20px;
   }
   .footerSection .row{gap: 30px 0;}
+  .pdr0{padding-right: calc(var(--bs-gutter-x)* .5);}
+  .pdl0{padding-left: calc(var(--bs-gutter-x)* .5);}
 }
 
 
@@ -106,5 +129,5 @@ p{ margin: 0; font-size: 18px; color: var(--black); }
     .homeBannerImg img{height:200px; margin-top: 20px;}
     .aboutUsText{ margin-top: var(--pad30);}
     .servicesSection .servicesBox{ flex-direction: column;}
-    
+    .visionText{ margin: var(--pad30);}
 }
